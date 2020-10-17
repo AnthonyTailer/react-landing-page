@@ -1,8 +1,10 @@
-/** Logo Props */
-export type LogoProps = {
+export type Image = {
   alternativeText: string
   url: string
 }
+
+/** Logo Props */
+export type LogoProps = Image
 
 /** Header Props */
 export type HeaderProps = {
@@ -12,20 +14,14 @@ export type HeaderProps = {
     label: string
     url: string
   }
-  image: {
-    alternativeText: string
-    url: string
-  }
+  image: Image
 }
 
 /** Section About Project Props */
 export type AboutProjectProps = {
   title: string
   description: string
-  image: {
-    alternativeText: string
-    url: string
-  }
+  image: Image
 }
 
 /** Section Tech Icons Props*/
@@ -81,6 +77,25 @@ export type PricingBoxProps = {
   }
 }
 
+/** Section About Us Props */
+export type SocialLink = {
+  title: string
+  url: string
+}
+
+export type Author = {
+  photo: Image
+  name: string
+  role: string
+  socialLinks: SocialLink[]
+  description: string
+}
+
+export type SectionAboutUsProps = {
+  title: string
+  authors: Author[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -90,4 +105,5 @@ export type LandingPageProps = {
   sectionModules: SectionModulesProps
   sectionAgenda: SectionAgendaProps
   pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }
