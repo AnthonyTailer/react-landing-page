@@ -1,8 +1,10 @@
+/** Logo Props */
 export type LogoProps = {
   alternativeText: string
   url: string
 }
 
+/** Header Props */
 export type HeaderProps = {
   title: string
   description: string
@@ -16,6 +18,7 @@ export type HeaderProps = {
   }
 }
 
+/** Section About Project Props */
 export type AboutProjectProps = {
   title: string
   description: string
@@ -25,6 +28,7 @@ export type AboutProjectProps = {
   }
 }
 
+/** Section Tech Icons Props*/
 type TechIcon = {
   title: string
   icon: {
@@ -37,9 +41,20 @@ export type SectionTechProps = {
   techIcons: TechIcon[]
 }
 
+/** Section Concepts Props*/
+export type Concept = {
+  title: string
+}
+
+export type SectionConceptsProps = {
+  title: string
+  concepts: Concept[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: AboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
 }
