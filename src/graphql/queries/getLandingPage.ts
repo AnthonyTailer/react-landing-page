@@ -23,10 +23,22 @@ const GET_LANDING_PAGE = gql`
     }
   }
 
+  fragment aboutProject on LandingPage {
+    sectionAboutProject {
+      title
+      description
+      image {
+        alternativeText
+        url
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
       ...header
+      ...aboutProject
     }
   }
 `
